@@ -18,8 +18,10 @@ package org.gradle.smoketests
 
 import org.gradle.testkit.runner.BuildResult
 import org.gradle.testkit.runner.GradleRunner
+import spock.lang.Ignore
 import spock.lang.Unroll
 
+@Ignore("until we get a build scan plugin 2.0 RC")
 class BuildScanPluginSmokeTest extends AbstractSmokeTest {
 
     private static final List<String> GRACEFULLY_UNSUPPORTED = [
