@@ -18,10 +18,12 @@ package org.gradle.smoketests
 
 import org.gradle.integtests.fixtures.resolve.ResolveTestFixture
 import org.gradle.test.fixtures.file.TestFile
+import spock.lang.Ignore
 import spock.lang.Unroll
 /**
  * https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies
  */
+@Ignore("until we get a build scan plugin 2.0 RC")
 class BomSupportPluginsSmokeTest extends AbstractSmokeTest {
     static bomVersion = "2.0.4.RELEASE"
     static bom = "'org.springframework.boot:spring-boot-dependencies:${bomVersion}'"
