@@ -22,6 +22,7 @@ import org.gradle.integtests.fixtures.executer.GradleHandle
 import org.gradle.test.fixtures.file.LeaksFileHandles
 import org.gradle.util.Requires
 import org.gradle.util.TestPrecondition
+import spock.lang.Ignore
 import spock.lang.Issue
 
 import static org.gradle.integtests.fixtures.BuildScanUserInputFixture.BUILD_SCAN_ERROR_MESSAGE_HINT
@@ -33,6 +34,7 @@ import static org.gradle.integtests.fixtures.BuildScanUserInputFixture.writeToSt
 
 @Requires(TestPrecondition.ONLINE)
 @LeaksFileHandles
+@Ignore("until we get a build scan plugin 2.0 RC")
 class AutoAppliedPluginsFunctionalTest extends AbstractPluginIntegrationTest {
 
     private static final String BUILD_SCAN_LICENSE_QUESTION = 'Publishing a build scan to scans.gradle.com requires accepting the Gradle Terms of Service defined at https://gradle.com/terms-of-service. Do you accept these terms?'
